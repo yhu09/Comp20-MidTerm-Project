@@ -1,5 +1,4 @@
 * {
-
   margin: 0;
   padding: 0;
   background-color: #000000;
@@ -11,6 +10,21 @@ li, a{
   font-size: 20px;
   color: #edf0f1;
   text-decoration: none;
+}
+
+li a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  background: #FFFFFF;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+li a:hover:after {
+  width: 100%;
+  position: relative;
+  left: 0;
 }
 
 header {
@@ -28,9 +42,13 @@ header {
 }
 
 .navbar_links li a {
-  transition: all 0.3s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .navbar_links li a:hover {
-  color: #0088a9
+  color: #49b6f9;
+}
+
+navbar_links li a:active {
+  text-decoration: underline;
 }
