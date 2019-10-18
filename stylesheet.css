@@ -35,6 +35,10 @@ header {
   z-index: 10;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .navbar_links {
   list-style: none;
 }
@@ -50,8 +54,4 @@ header {
 
 .navbar_links li a:hover {
   color: #49b6f9;
-}
-
-navbar_links li a:active {
-  text-decoration: underline;
 }
