@@ -7,7 +7,7 @@
 li, a{
   font-family: Monaco;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 100%;
   color: #edf0f1;
   text-decoration: none;
 }
@@ -29,7 +29,10 @@ li a:hover:after {
 
 header {
   float: right;
-  padding: 30px 10px;
+  padding-top: 2%;
+  padding-right: 1%;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar_links {
