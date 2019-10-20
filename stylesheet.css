@@ -78,15 +78,19 @@ header {
   font-family: Monaco;
   position: relative;
   color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
 }
 
-footer{
+.connect {
   position: relative;
-  font-family: Monaco;
-  color: #000000;
-  bottom: 0;
-  width: 99.2%;
-  left: 5px;
-  height:200px;
-  background-color: rgba(249,242,218, .6);
+  z-index: 0;
+  padding-top: 1%;
+  width: 3.2%;
+  height: 3.2%;
+}
+
+footer {
+  width: 100%;
+  background-color: #222;
+  padding: 40px 0px;
 }
