@@ -4,7 +4,8 @@
   background-color: #000000;
 }
 
-li, a{
+li,
+a {
   font-family: Monaco;
   font-weight: 500;
   font-size: 100%;
@@ -17,7 +18,7 @@ li a:after {
   display: block;
   height: 2px;
   left: 50%;
-  background: #FFFFFF;
+  background: #ffffff;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
