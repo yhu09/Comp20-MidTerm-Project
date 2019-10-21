@@ -56,3 +56,42 @@ header {
 .navbar_links li a:hover {
   color: #49b6f9;
 }
+
+.heading {
+  font-family: Optima;
+  font-size: 400%;
+  color: #000000;
+  position: relative;
+  padding-top: .5%;
+  background-color: #edf0f1;
+}
+
+.text_heading {
+  font-family: Monaco;
+  font-size: 150%;
+  position: relative;
+  padding-bottom: 1%;
+  color: #000000;
+  background-color: #edf0f1;
+}
+
+.text_regular {
+  font-family: Monaco;
+  position: relative;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.connect {
+  position: relative;
+  z-index: 0;
+  padding-top: 1%;
+  width: 3.2%;
+  height: 3.2%;
+}
+
+footer {
+  width: 100%;
+  background-color: #222;
+  padding: 40px 0px;
+}
