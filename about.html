@@ -11,8 +11,41 @@
       crossorigin="anonymous"
     />
     <style type="text/css">
-      div {
-        padding: 0.25%;
+      body {
+        background-color: #000000;
+        color: #edf0f1;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        padding-top: 2%;
+        padding-left: 5% !important;
+      }
+      h1 {
+        padding-left: 7%;
+        font-size: 500%;
+      }
+      div,
+      p,
+      h3,
+      h2 {
+        padding-left: 16.5%;
+        padding-right: 16.5%;
+        text-align: center;
+      }
+      #list,
+      #list-i {
+        text-align: left;
+        padding-left: 18%;
+        border-radius: 2%;
+        background-color: rgba(73, 182, 249, 0.15);
       }
     </style>
     <link href="stylesheet.css" rel="stylesheet" type="text/css" />
@@ -31,24 +64,39 @@
         </ul>
       </nav>
     </header>
+    <a href="index.html">
+      <img
+        class="logo"
+        src="logo.png"
+        alt="logo"
+        style="width: 10%; height: 10%;
+                          position: relative; right: 1%; top: 1%; z-index: 5;"
+      />
+    </a>
     <h1>About Us</h1>
     <p>
-      Founded in Fall 2019, _________ is a student-run organization at Tufts
+      Founded in Fall 2019, JumboJets is a student-run organization at Tufts
       University dedicated to providing convenient, eco-friendly vehicles to
       students.
     </p>
     <h2>Our Team</h2>
-    <p>Our staff members are:</p>
-    <ul>
-      <li>Undergraduates at Tufts</li>
-      <li>Trained in vehicle maintenance</li>
-      <li>Environmentally conscious</li>
-      <li>Passionate about helping their peers!</li>
-    </ul>
-    <p>
-      Here at ________, we strive to give Tufts students access to safe and fast
-      transportation around campus.
-    </p>
+    <div class="row">
+      <div class="column">
+        <p id="list">Our staff members are:</p>
+        <ul>
+          <li id="list-i">Undergraduates at Tufts</li>
+          <li id="list-i">Trained in vehicle maintenance</li>
+          <li id="list-i">Environmentally conscious</li>
+          <li id="list-i">Passionate about helping their peers!</li>
+        </ul>
+      </div>
+      <div class="column">
+        <p>
+          Here at JumboJets, we strive to give Tufts students access to safe and
+          fast transportation around campus.
+        </p>
+      </div>
+    </div>
     <h3>Looking to get involved?</h3>
     <a
       href="careers.html"
