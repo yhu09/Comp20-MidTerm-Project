@@ -81,16 +81,28 @@ header {
   background-color: rgba(255, 255, 255, 0);
 }
 
+.footer {
+  font-family: Monaco;
+  position: relative;
+  z-index: 5;
+  font-size:80%;
+  padding-left: 1%;
+  top: -40px;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .connect {
   position: relative;
-  z-index: 0;
-  padding-top: 1%;
-  width: 3.2%;
-  height: 3.2%;
+  z-index: 7;
+  width: 50px;
+  height: 50px;
 }
 
 footer {
   width: 100%;
-  background-color: #222;
-  padding: 40px 0px;
+  position: relative;
+  z-index: 0;
+  background-color: #000000;
+  padding: 20px 0px;
 }
