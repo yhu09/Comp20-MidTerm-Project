@@ -16,37 +16,120 @@
         color: #edf0f1;
       }
       .row {
+        /* padding: 10%; */
+        padding-top: 6%;
+        padding-bottom: 6%;
         display: flex;
         flex-direction: row;
         width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: rgba(73, 182, 249, 0.3);
       }
       .column {
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
         flex: 1;
-        padding-top: 2%;
-        padding-left: 5% !important;
+        /* padding-left: 5% !important; */
+        /* background-color: rgba(73, 182, 249, 0.3); */
+        /* background-color: #00000000; */
+      }
+      .content {
+        background-image: url("group.jpg");
+        background-size: cover;
+        padding: 0;
+      }
+      p {
+        font-size: 200%;
+      }
+      h2 {
+        font-size: 550%;
+        transform: translateY(-25%);
+        color: #ffffff;
+        /* color: white; */
+        text-shadow: 2px 2px 4px #000000;
       }
       h1 {
         padding-left: 7%;
-        font-size: 500%;
+        padding-top: 0%;
+        padding-bottom: 3%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 450%;
+        position: relative;
+        color: #edf0f1f3;
+        /* padding-bottom: 50%; */
+      }
+      #founded {
+        font-size: 150%;
+        padding: 2%;
+        padding-left: 12%;
+        padding-right: 12%;
+        color: #edf0f1;
+        background-color: rgb(0, 0, 0);
+        margin: 0;
+        border-top: 5px solid #edf0f1;
+        /* border-bottom: 5px solid #edf0f1; */
       }
       div,
       p,
       h3,
-      h2 {
-        padding-left: 16.5%;
-        padding-right: 16.5%;
+      h2,
+      ul#attributes {
         text-align: center;
+        background-color: #00000000;
       }
-      #list,
+      #here-at {
+        background-color: rgba(73, 181, 249, 0.842);
+        border-radius: 15%;
+        /* padding: 5%;
+        padding-top: 10%; */
+        padding: 15%;
+        /* padding-bottom: 10%; */
+        font-size: 200%;
+      }
+      #list {
+        /* color: rgb(44, 107, 143); */
+        /* border-radius: 15%; */
+        color: rgb(32, 76, 102);
+        background-color: #edf0f1d8 !important;
+        transform: translateX(15%);
+        border-radius: 15%;
+        font-size: 170%;
+        padding: 10%;
+      }
+      #list-i {
+        background-color: #edf0f100 !important;
+        color: rgb(32, 76, 102);
+        font-size: 75%;
+      }
+      #looking {
+        background-color: rgba(44, 107, 146, 0.842);
+        border-radius: 15%;
+        padding: 12%;
+        padding-top: 14%;
+        /* padding-bottom: 1%; */
+        font-size: 150%;
+        transform: translate(15%, -25%);
+      }
+      h3 {
+        font-size: 80%;
+      }
+      #careers-link {
+        font-size: 125%;
+        color: #edf0f1;
+      }
+      #careers-link:hover {
+        color: #49b6f9;
+      }
+      /* #list,
       #list-i {
         text-align: left;
         padding-left: 18%;
         border-radius: 2%;
-        background-color: rgba(73, 182, 249, 0.15);
-      }
+        /* background-color: rgba(73, 182, 249, 0.15); */
+      /* } */
     </style>
     <link href="stylesheet.css" rel="stylesheet" type="text/css" />
   </head>
@@ -73,36 +156,48 @@
                           position: relative; right: 1%; top: 1%; z-index: 5;"
       />
     </a>
-    <h1>About Us</h1>
-    <p>
+    <h1>MEET THE JET PACK</h1>
+    <p id="founded">
       Founded in Fall 2019, JumboJets is a student-run organization at Tufts
       University dedicated to providing convenient, eco-friendly vehicles to
       students.
     </p>
-    <h2>Our Team</h2>
-    <div class="row">
-      <div class="column">
-        <p id="list">Our staff members are:</p>
-        <ul>
-          <li id="list-i">Undergraduates at Tufts</li>
-          <li id="list-i">Trained in vehicle maintenance</li>
-          <li id="list-i">Environmentally conscious</li>
-          <li id="list-i">Passionate about helping their peers!</li>
-        </ul>
-      </div>
-      <div class="column">
-        <p>
-          Here at JumboJets, we strive to give Tufts students access to safe and
-          fast transportation around campus.
-        </p>
+    <div class="content">
+      <div class="row">
+        <div class="column">
+          <h2>THIS</h2>
+          <h2>IS</h2>
+          <h2>OUR</h2>
+          <h2>TEAM</h2>
+        </div>
+        <div class="column" id="column1">
+          <div id="list">
+            OUR STAFF MEMBERS ARE
+            <ul id="attributes">
+              <li id="list-i">Undergraduates at Tufts</li>
+              <li id="list-i">Trained in vehicle maintenance</li>
+              <li id="list-i">Environmentally conscious</li>
+              <li id="list-i">Passionate about helping their peers!</li>
+            </ul>
+          </div>
+          <div id="looking">
+            <h3>Looking to get involved?</h3>
+            <a
+              id="careers-link"
+              href="careers.html"
+              class="btn btn-default"
+              title="See Career Opportunities"
+              >Join the Jet Pack</a
+            >
+          </div>
+        </div>
+        <div class="column">
+          <div id="here-at">
+            Here at JumboJets, we strive to give Tufts students access to safe
+            and fast transportation around campus.
+          </div>
+        </div>
       </div>
     </div>
-    <h3>Looking to get involved?</h3>
-    <a
-      href="careers.html"
-      class="btn btn-default"
-      title="See Career Opportunities"
-      ><b>Join the Jet Pack</b></a
-    >
   </body>
 </html>
