@@ -11,73 +11,245 @@
       crossorigin="anonymous"
     />
     <style type="text/css">
-      div {
-        padding: 0.25%;
+      body {
+        background-color: #000000;
+        color: #edf0f1;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        background-color: rgba(73, 182, 249, 0.3);
+      }
+      .content {
+        padding: 0%;
+        background-image: url("golden-hour.jpg");
+        background-size: cover;
+        position: relative;
+        height: 100%;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        height: 100%;
+        width: 100%;
+        padding-top: 2%;
+        background-color: rgba(73, 182, 249, 0);
+      }
+      h1 {
+        padding-left: 7%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 500%;
+        position: relative;
+        color: rgb(44, 107, 143);
+        z-index: 4;
+        background-color: rgba(73, 182, 249, 0.3);
+      }
+      form {
+        padding-left: 24%;
+        text-align: center;
+        color: rgb(44, 107, 143);
+        /* border-radius: 15%; */
+        background-color: #edf0f1b2;
+        transform: translateX(20%);
+        border-radius: 15%;
+        padding: 0%;
+      }
+      b {
+        background-color: rgba(73, 182, 249, 0);
+      }
+      p {
+        position: relative;
+        font-size: 150%;
+        text-align: center;
+      }
+      p#tufts-id {
+        color: rgb(44, 107, 143);
+        border-radius: 15%;
+        padding: 11%;
+        background-color: #edf0f1b2;
+        font-size: 400%;
+      }
+      p#as-a-member {
+        position: relative;
+        border-radius: 15%;
+        font-size: 200%;
+        color: #edf0f1;
+        padding: 12%;
+        padding-bottom: 15%;
+        background-color: rgba(73, 182, 249, 0.7);
+        transform: translateX(10%);
+        z-index: 6;
+      }
+      #link-to-guidelines:hover {
+        color: #49b6f9;
+      }
+      #guidelines-div {
+        position: relative;
+        text-align: center;
+        background-color: rgb(44, 107, 146, 0.7);
+        padding: 12%;
+        padding-top: 14%;
+        padding-bottom: 10%;
+        border-radius: 15%;
+        transform: translate(10%, -40%);
+        z-index: 0;
+      }
+      #link-to-guidelines {
+        font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
+        font-size: 150%;
+        background-color: rbga(0, 0, 0, 0) !important;
+      }
+      .col1,
+      .col2,
+      .submit-div {
+        padding: 1%;
+        background-color: rgba(73, 182, 249, 0);
+      }
+      .submit-div {
+        padding-top: 2%;
+        padding-bottom: 5%;
+      }
+      ::placeholder {
+        color: #000000 !important;
+      }
+      input {
+        padding-left: 0.5%;
+        background-color: #edf0f1cb;
       }
     </style>
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Register to Ride</h1>
-    <form method="get">
-      <div class="col1"><b>Name:</b></div>
-      <div class="col2">
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Your Name"
-          required
-        />
-      </div>
-      <div class="col1">
-        <b>Class Year</b>
-        <div class="col2">
-          <select name="class-year" id="class-year" size="4" required>
-            <option>2020</option>
-            <option>2021</option>
-            <option>2022</option>
-            <option>2023</option>
-          </select>
+    <header>
+      <nav>
+        <ul class="navbar_links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="vehicles.html">Vehicles</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <a href="index.html">
+      <img
+        class="logo"
+        src="logo.png"
+        alt="logo"
+        style="width: 10%; height: 10%;
+                position: relative; right: 1%; top: 1%; z-index: 5;"
+      />
+    </a>
+    <div class="content">
+      <h1>Register to Ride</h1>
+
+      <div class="row">
+        <div class="column" id="column1">
+          <form method="get">
+            <div class="col1"><b>Name</b></div>
+            <div class="col2">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="col1"><b>Tufts ID</b></div>
+            <div class="col2">
+              <input
+                type="text"
+                name="tufts-id"
+                id="tufts-id"
+                placeholder="XXXXXXX"
+                required
+              />
+            </div>
+            <div class="col1">
+              <b>Class Year</b>
+            </div>
+            <div class="col2">
+              <input
+                type="text"
+                name="class-year"
+                id="class-year"
+                placeholder="XXXX"
+                required
+              />
+            </div>
+            <div class="col1"><b>Email</b></div>
+            <div class="col2">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="email@address.com"
+                required
+              />
+            </div>
+            <div class="col1"><b>Username</b></div>
+            <div class="col2">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Create a username"
+                required
+              />
+            </div>
+            <div class="col1"><b>Password</b></div>
+            <div class="col2">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Create a password"
+                required
+              />
+            </div>
+            <div class="submit-div">
+              <input
+                type="submit"
+                id="submit"
+                class="btn btn-info"
+                value="Let's Jet!"
+                style="background-color:#49b6f9 !important;"
+                ;
+              />
+            </div>
+          </form>
+        </div>
+        <div class="column">
+          <p class="col3" id="as-a-member">
+            <b
+              >As a member, you will get access to our JumboJets vehicles
+              located at hubs around campus.</b
+            >
+          </p>
+          <div id="guidelines-div">
+            <a
+              href="guidelines.html"
+              id="link-to-guidelines"
+              title="View JumboJets Guidelines"
+              >Learn more about our system!</a
+            >
+          </div>
+        </div>
+        <div class="column">
+          <p id="tufts-id" class="col3">
+            <b>Use your Tufts ID to unlock the vehicles!</b>
+          </p>
         </div>
       </div>
-      <div class="col1"><b>Email</b></div>
-      <div class="col2">
-        <input
-          type="text"
-          name="email"
-          id="email"
-          placeholder="email@address.com"
-          required
-        />
-      </div>
-      <div class="col1"><b>Username</b></div>
-      <div class="col2">
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Create a username"
-          required
-        />
-      </div>
-      <div class="col1"><b>Password</b></div>
-      <div class="col2">
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Create a password"
-          required
-        />
-      </div>
-      <div>
-        <input
-          type="submit"
-          id="submit"
-          class="btn btn-info"
-          value="Let's Jet!"
-        />
-      </div>
-    </form>
+    </div>
   </body>
 </html>
