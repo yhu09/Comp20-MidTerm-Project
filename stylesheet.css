@@ -4,11 +4,10 @@
   background-color: #000000;
 }
 
-li,
-a {
-  font-family: Monaco;
+li, a{
+  font-family: Arial;
   font-weight: 500;
-  font-size: 100%;
+  font-size: 120%;
   color: #edf0f1;
   text-decoration: none;
 }
@@ -18,13 +17,14 @@ li a:after {
   display: block;
   height: 2px;
   left: 50%;
-  background: #ffffff;
+  background: #FFFFFF;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
 li a:hover:after {
   width: 100%;
   position: relative;
+  z-index: 10;
   left: 0;
 }
 
@@ -32,8 +32,9 @@ header {
   float: right;
   padding-top: 2%;
   padding-right: 1%;
+  padding-left: 15%;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .logo {
@@ -58,17 +59,16 @@ header {
 }
 
 .heading {
-  font-family: Optima;
+  font-family: Arial;
   font-size: 400%;
   color: #000000;
   position: relative;
-  padding-top: 0.5%;
   background-color: #edf0f1;
 }
 
 .text_heading {
-  font-family: Monaco;
-  font-size: 150%;
+  font-family: Arial;
+  font-size: 180%;
   position: relative;
   padding-bottom: 1%;
   color: #000000;
@@ -76,22 +76,36 @@ header {
 }
 
 .text_regular {
-  font-family: Monaco;
+  font-family: Arial;
   position: relative;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.footer {
+  font-family: Arial;
+  position: relative;
+  z-index: 5;
+  font-size:100%;
+  padding-left: 1%;
+  top: -25px;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0);
+  height: 0px;
 }
 
 .connect {
   position: relative;
   z-index: 0;
-  padding-top: 1%;
-  width: 3.2%;
-  height: 3.2%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: -90px;
 }
 
 footer {
   width: 100%;
-  background-color: #222;
-  padding: 40px 0px;
+  position: relative;
+  z-index: 0;
+  background-color: #000000;
+  height: 0px;
 }
