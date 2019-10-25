@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 	<title>Guidelines</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="stylesheet.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
 		body {
 			color: #edf0f1;
-            background-color: #000000;
+			background-color: #000000;
+			font-family: Arial;
 		}
         h1 {
             padding-left: 7%;
             font-size: 500%;
         }
-		h2,h3,p, ul {
+		h2,h3,p {
 			padding-left: 16.5%;
             padding-right: 16.5%;
             text-align: center;
@@ -22,8 +22,16 @@
         h2 {
             font-size: 300%;
         }
+        h3 {
+        	font-size: 200%;
+        }
         p {
-            font-size: 125%;
+		  position: relative;
+		  color: #FFFFFF;
+		  background-color: rgba(255, 255, 255, 0);
+		  padding-top: 25px;
+		  padding-bottom: 25px;
+		  font-size: 125%;
         }
         p.description {
             text-align: left;
@@ -34,12 +42,18 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            padding-bottom: 50px;
         }
 		#map_img {
 			height: 400px;
 		}
-        ul {
-            text-align: left;
+        .rules {
+            text-align: center;
+            list-style: none;
+        }
+        .heading {
+        	background-color: #000000;
+        	color: #edf0f1;
         }
 	</style>
 </head>
@@ -62,7 +76,7 @@
 	    position: relative; right: 1%; top: 1%; z-index: 5;">
 	</a>
 
-	<h1>Guidelines</h1>
+	<h1 class='heading'>Guidelines</h1>
 	<p class='description'>
 		Ride JumboJets responsibly by following these simple steps!
 	<h2>Step 1</h2>
@@ -86,7 +100,7 @@
 	<p>Images of good and bad parking with X and √</p>
 
 	<h2>Ride safely</h2>
-	<ul>
+	<ul class='rules'>
 		<li>Always wear a helmet</li>
 		<li>Do not ride JumboJets on staircases</li>
 		<li>Park your JumboJet out of the way of pedestrians and vehicles</li>
