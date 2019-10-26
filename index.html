@@ -10,9 +10,15 @@
 </head>
 <body>
 <!--Copy: Start From Here-->
+<script>
+function imageClick(url) {
+    window.location = url;
+}
+</script>
+
   <header style="background-color: rgba(0,0,0,0)">
     <img class="logo" src="logo.png" alt="logo" style="width: 10%; height: 10%;
-      position: relative; z-index: 15;">
+      position: relative; z-index: 15;" onclick="imageClick('index.html')">
     <nav style="background-color: rgba(0,0,0,0)">
       <ul class="navbar_links" style="background-color: rgba(0,0,0,0)">
         <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="index.html">Home</a></li>
@@ -39,11 +45,11 @@
 
   <footer>
     <a href="index.html">
-      <img class="logo" src="logo.png" alt="logo" style="width: 110px; height: 100px;
-        position: relative; left: -.8%; top: -10px; z-index: 0;">
+      <img src="logo.png" alt="logo" style="width: 110px; height: 100px;
+        position: relative; z-index: 0; margin-left: -10px">
     </a>
     <p class="footer">419 Boston Ave </p>
-    <p class="footer" style="top: -5px">Medford, MA 02155</p>
+    <p class="footer" style="top: 10px">Medford, MA 02155</p>
     <p class="text_regular" align="right" style="right: 20px;
       position: relative; z-index: 1; font-size: 160%; top: -110px">Connect with us</p>
     <p class="text_regular" align="right" style="right: 20px;
