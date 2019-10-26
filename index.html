@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Jumbo Jets</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
 <style>
 
@@ -34,9 +35,33 @@ function imageClick(url) {
 
 
 <!--STOP HERE-->
+<script type="text/javascript">
+
+$(document).ready(function() {
+    var clicker = false;
+    function beeLeft() {
+        if (clicker == true) {
+          $("#b").attr("src","animateL.png");
+        }
+        $("#b").animate({left: "-=100%"}, 5000, "swing", beeRight);
+        clicker = false;
+    }
+    function beeRight() {
+        if (clicker == false) {
+          $("#b").attr("src","animateR.png");
+        }
+        $("#b").animate({left: "+=100%"}, 5000, "swing", beeLeft);
+        clicker = true;
+    }
+
+
+    beeRight();
+});
+</script>
 
 <img src="scooter.png" alt="scootandpoot" style="width: 90%; height: 90%;
   position: relative; padding-left: 2%; top: -65px; z-index: 2; margin-top: 1%">
+<img src="animateR.png" id="b" style="position:relative; z-index: 100; top: -145px; background-color: rgba(0,0,0,0); height: 150px; width: 160px">
 <p class="heading" align="center" style="padding-top: .5%">Ride With Us!</p>
 <p class="text_heading" align="center">Use your student ID to register and start
   riding!</p><br>
