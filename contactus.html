@@ -3,18 +3,19 @@
 <head>
 <meta charset="utf-8">
 	<title>Contact Us</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
 		body {
 			color: #edf0f1;
             background-color: #000000;
+            font-family: Arial;
 		}
         h1 {
             padding-left: 7%;
             font-size: 500%;
+            padding-bottom: 7%;
         }
-		h2,h3,p, ul {
+		h2,h3,p {
 			padding-left: 16.5%;
             padding-right: 16.5%;
             text-align: center;
@@ -25,24 +26,6 @@
         p {
             font-size: 125%;
         }
-        p.description {
-            text-align: left;
-            padding-left: 7%;
-            font-size: 150%;
-        }
-        img.detail {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-		#map_img {
-			height: 400px;
-		}
-        ul {
-            text-align: left;
-        }
-        
-        
         .addr {
             text-align: center;
             font-size: 200%;
@@ -54,28 +37,32 @@
 	</style>
 </head>
 <body>
-	<header>
-	    <nav>
-	      <ul class="navbar_links">
-	        <li ><a href="index.html">Home</a></li>
-	        <li><a href="guidelines.html">Guidelines</a></li>
-	        <li><a href="register.html">Register</a></li>
-	        <li><a href="vehicles.html">Vehicles</a></li>
-	        <li><a href="careers.html">Careers</a></li>
-	        <li><a href="contactus.html">Contact Us</a></li>
-	        <li><a href="about.html">About</a></li>
-	      </ul>
-	    </nav>
-	  </header>
-	<a href="index.html">
-	  <img class="logo" src="logo.png" alt="logo" style="width: 10%; height: 10%;
-	    position: relative; right: 1%; top: 1%; z-index: 5;">
-	</a>
+  <script>
+  function imageClick(url) {
+      window.location = url;
+  }
+  </script>
+
+    <header style="background-color: rgba(0,0,0,0)">
+      <img class="logo" src="logo.png" alt="logo" style="width: 10%; height: 10%;
+        position: relative; z-index: 15;" onclick="imageClick('index.html')">
+      <nav style="background-color: rgba(0,0,0,0)">
+        <ul class="navbar_links" style="background-color: rgba(0,0,0,0)">
+          <li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="index.html">Home</a></li>
+          <li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="guidelines.html">Guidelines</a></li>
+          <li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="register.html">Register</a></li>
+          <li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="vehicles.html">Vehicles</a></li>
+          <li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="careers.html">Careers</a></li>
+          <li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="contactus.html">Contact Us</a></li>
+          <li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
 	<h1>Contact Us</h1>
 	<h2>Email</h2>
     <p class='addr'><a href="mailto:jumbojets@tufts.edu">jumbojets@tufts.edu</a></p>
-    
+
     <h2>Phone</h2>
     <p class='addr'>(617) 555 - 1234</p>
 

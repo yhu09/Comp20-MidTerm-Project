@@ -6,7 +6,6 @@
 
 li, a{
   font-family: Arial;
-  font-weight: 500;
   font-size: 120%;
   color: #edf0f1;
   text-decoration: none;
@@ -29,12 +28,21 @@ li a:hover:after {
 }
 
 header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
   float: right;
+  position: relative;
+  z-index: 30;
   padding-top: 2%;
   padding-right: 1%;
+  padding-left: 10px;
 }
 
 .logo {
+  margin-top: -2%;
+  margin-left: -2%;
+  position: relative;
   cursor: pointer;
 }
 
@@ -60,6 +68,7 @@ header {
   font-size: 400%;
   color: #000000;
   position: relative;
+  z-index: 1;
   background-color: #edf0f1;
 }
 
@@ -84,8 +93,8 @@ header {
   position: relative;
   z-index: 5;
   font-size:100%;
-  padding-left: 1%;
-  top: -25px;
+  margin-left: 10px;
+  top: -13px;
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0);
   height: 0px;
