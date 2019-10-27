@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Jumbo Jets</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
 <style>
 
@@ -10,27 +11,57 @@
 </head>
 <body>
 <!--Copy: Start From Here-->
-  <header>
-    <nav>
-      <ul class="navbar_links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="guidelines.html">Guidelines</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="vehicles.html">Vehicles</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-        <li><a href="about.html">About</a></li>
+<script>
+function imageClick(url) {
+    window.location = url;
+}
+</script>
+
+  <header style="background-color: rgba(0,0,0,0)">
+    <img class="logo" src="logo.png" alt="logo" style="width: 10%; height: 10%;
+      position: relative; z-index: 15;" onclick="imageClick('index.html')">
+    <nav style="background-color: rgba(0,0,0,0)">
+      <ul class="navbar_links" style="background-color: rgba(0,0,0,0)">
+        <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="index.html">Home</a></li>
+        <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="guidelines.html">Guidelines</a></li>
+        <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="register.html">Register</a></li>
+        <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="vehicles.html">Vehicles</a></li>
+        <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="careers.html">Careers</a></li>
+        <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="contactus.html">Contact Us</a></li>
+        <li style="background-color: rgba(0,0,0,0)"><a style="background-color: rgba(0,0,0,0)" href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
-<a href="index.html">
-  <img class="logo" src="logo.png" alt="logo" style="width: 10%; height: 10%;
-    position: relative; right: 1%; top: 1%; z-index: 15;">
-</a>
+
+
 <!--STOP HERE-->
+<script type="text/javascript">
+
+$(document).ready(function() {
+    var clicker = false;
+    function beeLeft() {
+        if (clicker == true) {
+          $("#b").attr("src","animateL.png");
+        }
+        $("#b").animate({left: "-=100%"}, 5000, "swing", beeRight);
+        clicker = false;
+    }
+    function beeRight() {
+        if (clicker == false) {
+          $("#b").attr("src","animateR.png");
+        }
+        $("#b").animate({left: "+=100%"}, 5000, "swing", beeLeft);
+        clicker = true;
+    }
+
+
+    beeRight();
+});
+</script>
 
 <img src="scooter.png" alt="scootandpoot" style="width: 90%; height: 90%;
-  position: relative; padding-left: 2%; top: -50px; z-index: 2;">
+  position: relative; padding-left: 2%; top: -65px; z-index: 2; margin-top: 1%">
+<img src="animateR.png" id="b" style="position:relative; z-index: 100; top: -145px; background-color: rgba(0,0,0,0); height: 150px; width: 160px">
 <p class="heading" align="center" style="padding-top: .5%">Ride With Us!</p>
 <p class="text_heading" align="center">Use your student ID to register and start
   riding!</p><br>
@@ -39,11 +70,11 @@
 
   <footer>
     <a href="index.html">
-      <img class="logo" src="logo.png" alt="logo" style="width: 110px; height: 100px;
-        position: relative; left: -.8%; top: -10px; z-index: 0;">
+      <img src="logo.png" alt="logo" style="width: 110px; height: 100px;
+        position: relative; z-index: 0; margin-left: -10px">
     </a>
     <p class="footer">419 Boston Ave </p>
-    <p class="footer" style="top: -5px">Medford, MA 02155</p>
+    <p class="footer" style="top: 10px">Medford, MA 02155</p>
     <p class="text_regular" align="right" style="right: 20px;
       position: relative; z-index: 1; font-size: 160%; top: -110px">Connect with us</p>
     <p class="text_regular" align="right" style="right: 20px;
