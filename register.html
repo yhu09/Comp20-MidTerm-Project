@@ -18,6 +18,7 @@
       .row {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         height: 100%;
         width: 100%;
         margin: 0;
@@ -25,7 +26,7 @@
       }
       .content {
         padding: 0%;
-        background-image: url("golden-hour-crop.jpg");
+        background-image: url("register.jpg");
         background-size: cover;
         position: relative;
         height: 100%;
@@ -86,8 +87,9 @@
         font-size: 200%;
         color: #edf0f1;
         padding: 12%;
-        padding-bottom: 15%;
-        background-color: rgba(73, 182, 249, 0.7);
+        padding-top: 10%;
+        padding-bottom: 17%;
+        background-color: rgba(73, 182, 249, 0.8);
         text-shadow: 1px 1px 2px #000000;
         /* transform: translateX(); */
         z-index: 6;
@@ -98,13 +100,19 @@
       #guidelines-div {
         position: relative;
         text-align: center;
-        background-color: rgb(44, 107, 146, 0.7);
+        font-size: 125%;
+        background-color: rgb(44, 107, 146, 0.8);
         padding: 12%;
         padding-top: 14%;
         padding-bottom: 10%;
         border-radius: 15%;
         transform: translate(0, -40%);
-        z-index: 0;
+        z-index: 9;
+        text-shadow: 1px 1px 2px #000000;
+      }
+      #link-div {
+        background-color: rgba(44, 107, 146, 0) !important;
+        font-size: 75% !important;
       }
       #link-to-guidelines {
         font-family: "Lucida Sans", "Lucida Sans Regular", sans-serif;
@@ -132,6 +140,12 @@
       }
     </style>
     <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <script>
+      function onSubmit() {
+        alert("Thanks for registering!");
+        return true;
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -244,6 +258,7 @@
                 id="submit"
                 class="btn btn-info"
                 value="Let's Jet!"
+                onclick="return onSubmit();"
                 style="background-color:#49b6f9 !important;"
                 ;
               />
@@ -258,12 +273,15 @@
             >
           </p>
           <div id="guidelines-div">
-            <a
-              href="guidelines.html"
-              id="link-to-guidelines"
-              title="View JumboJets Guidelines"
-              >Learn more about our system!</a
-            >
+            Want to learn more about the system?
+            <div id="link-div">
+              <a
+                href="guidelines.html"
+                id="link-to-guidelines"
+                title="View JumboJets Guidelines"
+                >View Our Guidelines</a
+              >
+            </div>
           </div>
         </div>
         <div class="column">
