@@ -2,11 +2,35 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jumbo Jets</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
 <style>
-
+.container {
+  position: relative;
+  text-align: left;
+  color: white;
+}
+.middle-left {
+  position: absolute;
+  top: 45%;
+  bottom: 100%;
+  font-size: 5vw;
+  font-family: Arial;
+  left: 16px;
+  z-index: 10;
+}
+.middle-right {
+  position: absolute;
+  top: 35%;
+  bottom: 100%;
+  font-size: 5vw;
+  font-family: Arial;
+  left: 70%;
+  margin-left: 18px;
+  z-index: 10;
+}
 </style>
 </head>
 <body>
@@ -43,24 +67,38 @@ $(document).ready(function() {
         if (clicker == true) {
           $("#b").attr("src","animateL.png");
         }
-        $("#b").animate({left: "-=100%"}, 5000, "swing", beeRight);
+        $("#b").animate({left: "-=100%"}, 3000, "swing", beeRight);
         clicker = false;
     }
     function beeRight() {
         if (clicker == false) {
           $("#b").attr("src","animateR.png");
         }
-        $("#b").animate({left: "+=100%"}, 5000, "swing", beeLeft);
+        $("#b").animate({left: "+=100%"}, 3000, "swing", beeLeft);
         clicker = true;
     }
+    function animateText_R() {
+        $("#animateTextL").animate({left: "+=12%"}, 1000, "swing", animateText_L);
+    }
+    function animateText_L() {
+        $("#animateTextR").show();
+        $("#animateTextR").animate({left: "-=10%"}, 1000, "swing");
+    }
 
-
+    $("#animateTextR").hide();
     beeRight();
+    animateText_R();
 });
 </script>
 
-<img src="scooter.png" alt="scootandpoot" style="width: 90%; height: 90%;
-  position: relative; padding-left: 2%; top: -65px; z-index: 2; margin-top: 1%">
+<div class="container">
+  <img src="scooter.png" alt="scootandpoot" style="width: 90%; height: 90%;
+    position: relative; padding-left: 2%; top: -65px; z-index: 2; margin-top: 1%; background-color: rgba(0,0,0,0)">
+  <div class="middle-left" id="animateTextL"><b><i>Register!</i></b></div>
+  <div class="middle-right" id="animateTextR"><b><i>Ride Today!</i></b></div>
+</div>
+
+
 <img src="animateR.png" id="b" style="position:relative; z-index: 12;
   padding-bottom: 2%; margin-top: -30%; background-color: rgba(0,0,0,0); height: 12%; width: 12%">
 <p class="heading" align="center" style="padding-top: .5%">Ride With Us!</p>
