@@ -1,1 +1,125 @@
-// Career Page
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Careers</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			color: #edf0f1;
+			background-color: #000000;
+			font-family: Arial;
+		}
+
+		div{
+			text-align: center;
+		}
+
+		a{
+			text-align: left;
+		}
+
+		#SEposition: {
+			display: none;
+			z-index: 1;
+			position: absolute;
+		}
+
+		.pos {
+			width: 800px;
+			height: 200;
+			opacity: 1;
+			align-content: center;
+		}
+
+
+		#myBtn {
+			width: 200px;
+			font-size: 18px;
+			padding: 10px;
+			border: none;
+			background: #000;
+			color: #fff;
+			cursor: pointer;
+			border-radius: 10px;
+			align-content: centertext-decoration: none; ;
+		}
+
+		#myBtn:hover {
+			background: #ddd;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function imageClick(url) {
+			window.location = url;
+		}
+	</script>
+
+	<header style="background-color: rgba(0,0,0,0)">
+		<img class="logo" src="logo.png" alt="logo" style="width: 10%; height: 10%;
+		position: relative; z-index: 15;" onclick="imageClick('index.html')">
+		<nav style="background-color: rgba(0,0,0,0)">
+			<ul class="navbar_links" style="background-color: rgba(0,0,0,0)">
+				<li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="index.html">Home</a></li>
+				<li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="guidelines.html">Guidelines</a></li>
+				<li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="register.html">Register</a></li>
+				<li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="vehicles.html">Vehicles</a></li>
+				<li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="careers.html">Careers</a></li>
+				<li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="contactus.html">Contact Us</a></li>
+				<li style="background-color: rgba(0,0,0,0)"><a style="text-decoration: none; background-color: rgba(0,0,0,0)" href="about.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="Listings "> 
+		<h1>Open Positions: </h1>
+		<br>
+		<br>
+		<button class="button1" id="myBtn"># Software Engineer</button>
+		<div id ="SEposition" style="font-size:0;"> 
+			<img class="pos" id = "se1" src="SEJob1.png">
+			<img class="pos" id = "se2" src="SEJob2.png">
+		</div>
+		<br>
+
+		<button class="button2" id="myBtn"># Charger</button>
+
+		<div class="position" style="font-size:0;">
+			<img class="pos" id = "cp1" src="CJob1.png">
+			<img class="pos" id = "cp2" src="CJob2.png">
+			<img class="pos" id = "cp3" src="CJob3.png">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		
+
+		$(document).ready(function() {
+			$(".pos").hide();
+
+			$(".button1").click(function() {
+				$("#se1").show();
+				$("#se2").show();
+				$("#cp1").hide();
+				$("#cp2").hide();
+				$("#cp3").hide();
+			});
+
+			$(".button2").click(function() {
+				$("#se1").hide();
+				$("#se2").hide();
+				$("#cp1").show();
+				$("#cp2").show();
+
+			});
+
+
+		});
+	</script>
+</body>
+</html>
