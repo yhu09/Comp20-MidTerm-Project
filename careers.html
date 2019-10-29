@@ -84,7 +84,6 @@
 			<img class="pos" id = "se1" src="SEJob1.png">
 			<img class="pos" id = "se2" src="SEJob2.png">
 		</div>
-		<br>
 
 		<button class="button2" id="myBtn"># Charger</button>
 
@@ -93,16 +92,31 @@
 			<img class="pos" id = "cp2" src="CJob2.png">
 			<img class="pos" id = "cp3" src="CJob3.png">
 		</div>
+
+		<button class="button3" id="myBtn"># Accountant</button>
+
+		<div class="Senior Accountant" style="font-size:0;">
+			<img class="pos" id = "SRAcct1" src="SRAcct1.png">
+			<img class="pos" id = "SRAcct2" src="SRAcct2.png">
+		</div>
+
+		<div class="apply">
+			If interested, email your resume to: jumbojets@tufts.edu
+		</div>
 	</div>
 
 	<script type="text/javascript">
 
-		
 
 		$(document).ready(function() {
 			$(".pos").hide();
+			$(".apply").hide();
+
 
 			$(".button1").click(function() {
+				$(".apply").show();
+				$("#SRAcct1").hide();
+				$("#SRAcct2").hide();
 				$("#se1").show();
 				$("#se2").show();
 				$("#cp1").hide();
@@ -110,11 +124,26 @@
 				$("#cp3").hide();
 			});
 
+
 			$(".button2").click(function() {
+				$(".apply").show();
+				$("#SRAcct1").hide();
+				$("#SRAcct2").hide();
 				$("#se1").hide();
 				$("#se2").hide();
 				$("#cp1").show();
 				$("#cp2").show();
+
+			});
+
+			$(".button3").click(function() {
+				$(".apply").show();
+				$("#se1").hide();
+				$("#se2").hide();
+				$("#cp1").hide();
+				$("#cp2").hide();
+				$("#SRAcct1").show();
+				$("#SRAcct2").show();
 
 			});
 
